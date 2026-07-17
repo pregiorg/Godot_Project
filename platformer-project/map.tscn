@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://cg71nquqx3f6"]
 
-[ext_resource type="Texture2D" uid="uid://cki41c7fk16e" path="res://assets/sprites/world_tileset.png" id="1_htphj"]
-[ext_resource type="Texture2D" uid="uid://4wrnsjugl7ap" path="res://assets/sprites/knight.png" id="2_8ilb8"]
-[ext_resource type="Script" uid="uid://bhhq5ghslkq4u" path="res://assets/scripts/player.gd" id="2_vlrnh"]
+[ext_resource type="Texture2D" uid="uid://cki41c7fk16e" path="res://assets/sprites/world_tileset.png" id="1_e0an3"]
+[ext_resource type="Script" uid="uid://bhhq5ghslkq4u" path="res://assets/scripts/player.gd" id="2_p5pve"]
+[ext_resource type="Texture2D" uid="uid://4wrnsjugl7ap" path="res://assets/sprites/knight.png" id="3_urblq"]
+[ext_resource type="PackedScene" uid="uid://yrf11ownexsy" path="res://scenes/platform.tscn" id="4_p5pve"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ilb8"]
-texture = ExtResource("1_htphj")
+texture = ExtResource("1_e0an3")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
@@ -172,19 +173,19 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8ilb8")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vlrnh"]
-atlas = ExtResource("2_8ilb8")
+atlas = ExtResource("3_urblq")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wvmjv"]
-atlas = ExtResource("2_8ilb8")
+atlas = ExtResource("3_urblq")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jjg0h"]
-atlas = ExtResource("2_8ilb8")
+atlas = ExtResource("3_urblq")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_df36h"]
-atlas = ExtResource("2_8ilb8")
+atlas = ExtResource("3_urblq")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nsqk2"]
@@ -218,8 +219,9 @@ format = 2
 layer_0/tile_data = PackedInt32Array(983045, 0, 0, 983046, 0, 0, 983047, 0, 0, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 1048581, 0, 1, 1048582, 0, 1, 1048583, 0, 1, 1048584, 0, 1, 1048585, 0, 1, 1048586, 0, 1, 1048587, 0, 1, 1048588, 0, 1, 1048589, 0, 1, 1114124, 65536, 1, 1114123, 65536, 1, 1114122, 65536, 1, 1114121, 65536, 1, 1114120, 65536, 1, 1114119, 65536, 1, 1114118, 65536, 1, 1114117, 65536, 1, 1114125, 65536, 1, 1179661, 393216, 1, 1179660, 393216, 1, 1179659, 393216, 1, 1179658, 393216, 1, 1179657, 393216, 1, 1179656, 393216, 1, 1179655, 393216, 1, 1179654, 393216, 1, 1179653, 393216, 1, 1179662, 393216, 1, 1114126, 65536, 1, 983054, 0, 0, 1048591, 0, 0, 1114128, 0, 0, 1114127, 0, 0, 1048590, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1179663, 393216, 1, 1179664, 393216, 1, 1179665, 393216, 1, 1179666, 393216, 1, 1114131, 589824, 0, 1114132, 655360, 0, 1114133, 589824, 0, 1114136, 655360, 0, 1114137, 655360, 0, 1114138, 589824, 0, 1114139, 720896, 0, 1114140, 720896, 0, 1114141, 720896, 0, 1114142, 655360, 0, 1114143, 655360, 0, 1114144, 655360, 0, 1114145, 0, 0, 1114146, 0, 0, 1114147, 0, 0, 1114148, 0, 0, 1179684, 0, 1, 1114149, 0, 0, 1179685, 0, 1, 1179683, 0, 1, 1179682, 0, 1, 1179681, 0, 1, 1179686, 0, 1, 1245222, 65536, 1, 1245221, 65536, 1, 1245220, 65536, 1, 1245219, 65536, 1, 1245218, 65536, 1, 1245217, 65536, 1, 1310753, 393216, 1, 1310754, 393216, 1, 1310755, 393216, 1, 1310756, 393216, 1, 1310757, 393216, 1, 1310758, 393216, 1, 1114150, 0, 0, 1114151, 655360, 0, 1114152, 655360, 0, 1114153, 720896, 0, 1114154, 0, 0, 1114155, 0, 0, 1114156, 0, 0, 1114157, 0, 0, 1114158, 0, 0, 1114159, 0, 0, 1114160, 0, 0, 1179690, 0, 1, 1179691, 0, 1, 1179692, 0, 1, 1179693, 0, 1, 1179694, 0, 1, 1179695, 0, 1, 1179696, 0, 1, 1245226, 65536, 1, 1245227, 65536, 1, 1245228, 65536, 1, 1245229, 65536, 1, 1245230, 65536, 1, 1245231, 65536, 1, 1245232, 65536, 1, 1310762, 393216, 1, 1310763, 393216, 1, 1310764, 393216, 1, 1310765, 393216, 1, 1310766, 393216, 1, 1310767, 393216, 1, 1310768, 393216, 1, 917517, 0, 5, 851981, 0, 4, 786445, 0, 3, 851984, 0, 0, 851985, 0, 1, 786449, 0, 0, 786450, 0, 1, 720914, 0, 0, 720915, 0, 0, 786451, 0, 1, 786452, 0, 1, 786453, 0, 1, 720916, 0, 0, 720917, 0, 0, 720918, 589824, 0, 720919, 655360, 0, 720920, 720896, 0, 786457, 0, 1, 786458, 0, 1, 786459, 0, 1, 786460, 0, 1, 786461, 0, 1, 851997, 0, 1, 851998, 0, 1, 917534, 0, 1, 917535, 0, 1, 720921, 0, 0, 720922, 0, 0, 720923, 0, 0, 720924, 0, 0, 720925, 0, 0, 786462, 0, 0, 851999, 0, 0, 1048612, 65536, 4, 720926, 65536, 4, 786437, 393216, 3, 851973, 393216, 4, 917509, 393216, 5, 524315, 393216, 3, 589851, 393216, 4, 655387, 393216, 5)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1310280218]
+z_index = 5
 position = Vector2(2, 0)
-script = ExtResource("2_vlrnh")
+script = ExtResource("2_p5pve")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=792741641]
 position = Vector2(86, 222)
@@ -234,3 +236,9 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1061429402]
 position = Vector2(88, 233)
 shape = SubResource("CircleShape2D_13qdw")
+
+[node name="Platform" parent="." unique_id=1933064806 instance=ExtResource("4_p5pve")]
+position = Vector2(216, 205)
+
+[node name="Platform2" parent="." unique_id=791432927 instance=ExtResource("4_p5pve")]
+position = Vector2(818, 280)
