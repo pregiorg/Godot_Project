@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bhhq5ghslkq4u" path="res://assets/scripts/player.gd" id="2_p5pve"]
 [ext_resource type="Texture2D" uid="uid://4wrnsjugl7ap" path="res://assets/sprites/knight.png" id="3_urblq"]
 [ext_resource type="PackedScene" uid="uid://yrf11ownexsy" path="res://scenes/platform.tscn" id="4_p5pve"]
+[ext_resource type="PackedScene" uid="uid://divyi33p7kd6u" path="res://scenes/coin.tscn" id="5_urblq"]
+[ext_resource type="PackedScene" uid="uid://bxm3ju0tyd6a1" path="res://scenes/killzone.tscn" id="6_iw27f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ilb8"]
 texture = ExtResource("1_e0an3")
@@ -249,7 +251,21 @@ _data = {
 &"move": SubResource("Animation_urblq")
 }
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xrivr"]
+
 [node name="Game" type="Node2D" unique_id=509340953]
+
+[node name="Coin" parent="." unique_id=2131408515 instance=ExtResource("5_urblq")]
+position = Vector2(296, 265)
+
+[node name="Coin2" parent="." unique_id=322489193 instance=ExtResource("5_urblq")]
+position = Vector2(536, 266)
+
+[node name="Coin3" parent="." unique_id=894278162 instance=ExtResource("5_urblq")]
+position = Vector2(678, 266)
+
+[node name="Coin4" parent="." unique_id=1854249016 instance=ExtResource("5_urblq")]
+position = Vector2(967, 264)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1742418490]
 tile_set = SubResource("TileSet_bykpt")
@@ -259,11 +275,14 @@ layer_0/tile_data = PackedInt32Array(983045, 0, 0, 983046, 0, 0, 983047, 0, 0, 9
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1310280218]
 z_index = 5
 position = Vector2(2, 0)
+collision_layer = 2
 script = ExtResource("2_p5pve")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=792741641]
 position = Vector2(86, 222)
 zoom = Vector2(4, 4)
+limit_bottom = 334
+limit_smoothed = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1309365152]
 position = Vector2(89, 227)
@@ -284,3 +303,9 @@ position = Vector2(818, 280)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2" unique_id=1932977698]
 libraries/ = SubResource("AnimationLibrary_iw27f")
 autoplay = &"move"
+
+[node name="Killzone" parent="." unique_id=1909346443 instance=ExtResource("6_iw27f")]
+position = Vector2(153, 350)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=614566379]
+shape = SubResource("WorldBoundaryShape2D_xrivr")
