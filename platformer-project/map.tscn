@@ -198,6 +198,74 @@ region = Rect2(64, 0, 32, 32)
 atlas = ExtResource("3_urblq")
 region = Rect2(96, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_05x41"]
+atlas = ExtResource("3_urblq")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqbix"]
+atlas = ExtResource("3_urblq")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oysan"]
+atlas = ExtResource("3_urblq")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb2pt"]
+atlas = ExtResource("3_urblq")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0t07s"]
+atlas = ExtResource("3_urblq")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qsgm"]
+atlas = ExtResource("3_urblq")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooc2g"]
+atlas = ExtResource("3_urblq")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wwcf"]
+atlas = ExtResource("3_urblq")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbpbn"]
+atlas = ExtResource("3_urblq")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6rn7"]
+atlas = ExtResource("3_urblq")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4on3e"]
+atlas = ExtResource("3_urblq")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bssq0"]
+atlas = ExtResource("3_urblq")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jk4ss"]
+atlas = ExtResource("3_urblq")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5om4"]
+atlas = ExtResource("3_urblq")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jky6x"]
+atlas = ExtResource("3_urblq")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4sf5t"]
+atlas = ExtResource("3_urblq")
+region = Rect2(192, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mr0t"]
+atlas = ExtResource("3_urblq")
+region = Rect2(224, 96, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_nsqk2"]
 animations = [{
 "frames": [{
@@ -215,6 +283,67 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05x41")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqbix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oysan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sb2pt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0t07s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qsgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooc2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wwcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbpbn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6rn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4on3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bssq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jk4ss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5om4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jky6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4sf5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mr0t")
+}],
+"loop": 1,
+"name": &"run",
 "speed": 10.0
 }]
 
@@ -413,7 +542,7 @@ limit_smoothed = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1309365152]
 position = Vector2(89, 227)
 sprite_frames = SubResource("SpriteFrames_nsqk2")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1061429402]
