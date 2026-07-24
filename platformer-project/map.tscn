@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cg71nquqx3f6"]
 
 [ext_resource type="Texture2D" uid="uid://cki41c7fk16e" path="res://assets/sprites/world_tileset.png" id="1_e0an3"]
+[ext_resource type="Script" uid="uid://vx5x68qgiq0n" path="res://assets/scripts/game_manager.gd" id="1_oysan"]
 [ext_resource type="Script" uid="uid://bhhq5ghslkq4u" path="res://assets/scripts/player.gd" id="2_p5pve"]
 [ext_resource type="Texture2D" uid="uid://4wrnsjugl7ap" path="res://assets/sprites/knight.png" id="3_urblq"]
 [ext_resource type="PackedScene" uid="uid://yrf11ownexsy" path="res://scenes/platform.tscn" id="4_p5pve"]
@@ -8,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bxm3ju0tyd6a1" path="res://scenes/killzone.tscn" id="6_iw27f"]
 [ext_resource type="PackedScene" uid="uid://dv7tqlp7vx4hk" path="res://scenes/platofrm2.tscn" id="7_71pa8"]
 [ext_resource type="PackedScene" uid="uid://b1eke7cyjvxlr" path="res://scenes/slime.tscn" id="8_05x41"]
+[ext_resource type="FontFile" uid="uid://7fro4dlt5118" path="res://assets/fonts/PixelOperator8.ttf" id="9_gqbix"]
+[ext_resource type="PackedScene" uid="uid://dxnvajwk40fg6" path="res://scenes/music.tscn" id="11_sb2pt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ilb8"]
 texture = ExtResource("1_e0an3")
@@ -506,6 +509,10 @@ _data = {
 
 [node name="Game" type="Node2D" unique_id=509340953]
 
+[node name="GameManager" type="Node" parent="." unique_id=1049797014]
+unique_name_in_owner = true
+script = ExtResource("1_oysan")
+
 [node name="TileMap" type="TileMap" parent="." unique_id=1742418490]
 tile_set = SubResource("TileSet_bykpt")
 format = 2
@@ -588,3 +595,27 @@ autoplay = &"ice2"
 
 [node name="Slime" parent="." unique_id=1079272536 instance=ExtResource("8_05x41")]
 position = Vector2(3515, 324)
+
+[node name="Labels" type="Node" parent="." unique_id=175638006]
+
+[node name="Label" type="Label" parent="Labels" unique_id=1906335907]
+offset_left = 8.0
+offset_top = 147.0
+offset_right = 180.0
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_gqbix")
+theme_override_font_sizes/font_size = 16
+text = "Space to jump"
+
+[node name="Label2" type="Label" parent="Labels" unique_id=1168073832]
+offset_left = 2997.0
+offset_top = 21.0
+offset_right = 3169.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_gqbix")
+theme_override_font_sizes/font_size = 16
+text = "Watch out.."
+
+[node name="Music" parent="." unique_id=1188865279 instance=ExtResource("11_sb2pt")]
